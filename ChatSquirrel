@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ChatSquirrel Privacy Policy</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --text: #1c1917;
+      --muted: #57534e;
+      --line: #e7e5e4;
+      --bg: #fafaf9;
+      --card: #ffffff;
+      --accent: #9a3412;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text: #f5f5f4;
+        --muted: #a8a29e;
+        --line: #44403c;
+        --bg: #1c1917;
+        --card: #292524;
+        --accent: #fdba74;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.7 "Segoe UI", "PingFang SC", "Noto Sans SC", sans-serif;
+    }
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 20px 80px;
+    }
+    header h1 {
+      margin: 0 0 8px;
+      font-size: 32px;
+      line-height: 1.25;
+    }
+    header p { margin: 0; color: var(--muted); }
+    nav {
+      display: flex;
+      gap: 16px;
+      margin: 28px 0 8px;
+    }
+    nav a { color: var(--accent); }
+    article {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 28px 28px 8px;
+      margin-top: 28px;
+    }
+    h2 {
+      margin: 32px 0 8px;
+      font-size: 20px;
+    }
+    article > h2:first-child { margin-top: 0; }
+    p, li { color: var(--text); }
+    ul { padding-left: 1.2em; }
+    li { margin: 6px 0; }
+    a { color: var(--accent); }
+    code {
+      font-family: ui-monospace, Consolas, monospace;
+      font-size: 0.92em;
+    }
+    footer {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>ChatSquirrel Privacy Policy</h1>
+      <p>隐私政策 · 生效日期 Effective date: November 21, 2026</p>
+      <nav>
+        <a href="#zh">中文</a>
+        <a href="#en">English</a>
+      </nav>
+    </header>
+
+    <article id="zh" lang="zh-CN">
+      <h2>中文</h2>
+      <p>ChatSquirrel（下称“本扩展”）是一款浏览器扩展，用于把你在 ChatGPT、Gemini、DeepSeek 或 Grok 上当前打开的对话导出为 PDF、Word、Markdown 或 TXT 文件。本政策说明本扩展处理哪些信息。</p>
+
+      <h2>1. 我们处理的信息</h2>
+      <p>在你的设备上处理、不上传到我们的服务器：</p>
+      <ul>
+        <li>当前对话的文字、图片和标题，仅用于生成你保存到本机的文件。</li>
+        <li>这些网站为加载该对话而发出的请求头和会话标识，仅保存在本次浏览器会话的内存中，用于重新获取这段对话。</li>
+        <li>界面语言、是否已显示评价提示、登录令牌，以及当日剩余导出次数。这些保存在扩展的本地存储中。</li>
+      </ul>
+      <p>你选择注册或登录时，会发送到我们的服务器（<code>https://aichat-export-backend.jiangwenchao6666.workers.dev</code>）：</p>
+      <ul>
+        <li>电子邮箱、验证码、密码。注册时如果你填写了邀请码，邀请码也会发送。</li>
+        <li>你的时区，用于按自然日计算导出额度。</li>
+        <li>一次导出记录：文件类型（PDF、Word、Markdown 或 TXT）和站点名称（ChatGPT、Gemini、DeepSeek 或 Grok）。不含对话内容。</li>
+      </ul>
+      <p>未登录使用时：</p>
+      <ul>
+        <li>本扩展根据浏览器特征生成本机标识。特征包括用户代理、语言、平台、CPU 核心数、设备内存、屏幕尺寸、时区、Canvas 绘制结果和显卡渲染器信息。这些原始特征只在本地计算，服务器只收到计算后的标识（以 <code>g_</code> 开头的一串字符）。</li>
+        <li>该标识、时区、文件类型和站点名称会发送到服务器，用于统计免费导出次数。</li>
+      </ul>
+
+      <h2>2. 我们如何使用这些信息</h2>
+      <ul>
+        <li>生成并保存你要求导出的文件。</li>
+        <li>创建和维护你的账号，发送验证码，完成登录、重置密码和额度查询。</li>
+        <li>按日统计导出次数，执行免费次数和会员额度。</li>
+        <li>记住你的语言和评价提示状态。</li>
+      </ul>
+      <p>我们不出售个人信息，不用这些信息投放广告，也不上传对话内容。</p>
+
+      <h2>3. 信息保存多久</h2>
+      <ul>
+        <li>对话内容不写入我们的服务器。导出文件由你自己保存在电脑上。</li>
+        <li>登录令牌、语言、本机标识和额度缓存保存在扩展本地存储中，直到你退出登录、清除扩展数据或卸载扩展。</li>
+        <li>账号资料和导出次数记录保存在我们的服务器上，直到你要求删除账号。</li>
+      </ul>
+
+      <h2>4. 共享</h2>
+      <p>我们不向第三方出售或出租你的信息。下列情况除外：</p>
+      <ul>
+        <li>你导出时，本扩展会以你在该网站已登录的身份，向 ChatGPT、Gemini、DeepSeek 或 Grok 请求当前对话。这些请求受该网站自己的隐私政策约束。</li>
+        <li>账号与额度服务托管在 Cloudflare Workers 上。Cloudflare 会为提供托管服务而处理相应的网络请求。</li>
+        <li>法律要求时，我们可能披露必要信息。</li>
+      </ul>
+
+      <h2>5. 你的选择</h2>
+      <ul>
+        <li>可以不注册，以访客身份使用有限的每日导出次数。</li>
+        <li>可以在扩展中退出登录。退出后本地登录令牌会被删除。</li>
+        <li>可以卸载扩展。卸载会移除保存在扩展本地存储中的数据。</li>
+        <li>可以来信要求删除服务器上的账号、邮箱和导出记录。</li>
+      </ul>
+
+      <h2>6. 儿童</h2>
+      <p>本扩展不面向 13 岁以下儿童，也不会故意收集儿童的个人信息。</p>
+
+      <h2>7. 政策变更</h2>
+      <p>我们可能更新本政策。更新后的文本会发布在本页面，并修改页首的生效日期。若变更会实质影响我们收集或使用信息的方式，我们会在扩展或本页面作出说明。</p>
+
+      <h2>8. 联系我们</h2>
+      <p>如需查询、更正或删除你的信息，请发送邮件至：<a href="mailto:your-email@example.com">your-email@example.com</a></p>
+    </article>
+
+    <article id="en" lang="en">
+      <h2>English</h2>
+      <p>ChatSquirrel is a browser extension that exports the conversation you currently have open on ChatGPT, Gemini, DeepSeek, or Grok to a PDF, Word, Markdown, or TXT file. This policy describes the information the extension handles.</p>
+
+      <h2>1. Information we process</h2>
+      <p>Processed on your device and not uploaded to our server:</p>
+      <ul>
+        <li>The text, images, and title of the current conversation, used only to build the file you save on your computer.</li>
+        <li>Request headers and the conversation id those sites use to load that conversation. They stay in memory for the browser session and are used only to fetch that conversation again.</li>
+        <li>Your interface language, whether the review prompt has been shown, your sign-in token, and the remaining export count for the day. These are kept in the extension’s local storage.</li>
+      </ul>
+      <p>Sent to our server at <code>https://aichat-export-backend.jiangwenchao6666.workers.dev</code> if you register or sign in:</p>
+      <ul>
+        <li>Your email address, verification code, and password. An invite code is sent only if you enter one.</li>
+        <li>Your time zone, so daily export limits follow your calendar day.</li>
+        <li>An export record containing the file type (PDF, Word, Markdown, or TXT) and the site name (ChatGPT, Gemini, DeepSeek, or Grok). The conversation itself is not included.</li>
+      </ul>
+      <p>If you use the extension without an account:</p>
+      <ul>
+        <li>The extension creates a local identifier from browser traits: user agent, language, platform, CPU count, device memory, screen size, time zone, a canvas drawing, and the graphics renderer. Those traits stay on your device. The server receives only the resulting identifier, a string starting with <code>g_</code>.</li>
+        <li>That identifier, your time zone, the file type, and the site name are sent to count free exports.</li>
+      </ul>
+
+      <h2>2. How we use this information</h2>
+      <ul>
+        <li>To create and save the file you ask to export.</li>
+        <li>To create and maintain your account, send verification codes, and handle sign-in, password reset, and quota checks.</li>
+        <li>To count exports per day and apply free and member limits.</li>
+        <li>To remember your language and review-prompt state.</li>
+      </ul>
+      <p>We do not sell personal information, we do not use it for advertising, and we do not upload conversation content.</p>
+
+      <h2>3. How long we keep it</h2>
+      <ul>
+        <li>Conversation content is not written to our server. Exported files remain wherever you save them.</li>
+        <li>The sign-in token, language, local identifier, and quota cache stay in extension storage until you sign out, clear the extension’s data, or uninstall it.</li>
+        <li>Account details and export-count records stay on our server until you ask us to delete the account.</li>
+      </ul>
+
+      <h2>4. Sharing</h2>
+      <p>We do not sell or rent your information. We share it only in these cases:</p>
+      <ul>
+        <li>When you export, the extension requests the current conversation from ChatGPT, Gemini, DeepSeek, or Grok using your existing sign-in on that site. Those requests are covered by that site’s own privacy policy.</li>
+        <li>The account and quota service is hosted on Cloudflare Workers. Cloudflare processes the network requests required to run that service.</li>
+        <li>We may disclose information when the law requires it.</li>
+      </ul>
+
+      <h2>5. Your choices</h2>
+      <ul>
+        <li>You can use a limited number of daily exports without registering.</li>
+        <li>You can sign out in the extension. Signing out deletes the local sign-in token.</li>
+        <li>You can uninstall the extension. Uninstalling removes data stored in the extension’s local storage.</li>
+        <li>You can email us to delete your account, email address, and export records from our server.</li>
+      </ul>
+
+      <h2>6. Children</h2>
+      <p>This extension is not directed at children under 13, and we do not knowingly collect their personal information.</p>
+
+      <h2>7. Changes</h2>
+      <p>We may update this policy. The new text will be posted on this page with a new effective date. If a change materially affects how we collect or use information, we will note it in the extension or on this page.</p>
+
+      <h2>8. Contact</h2>
+      <p>To access, correct, or delete your information, email: <a href="mailto:your-email@example.com">your-email@example.com</a></p>
+    </article>
+
+    <footer>ChatSquirrel · November 21, 2026</footer>
+  </main>
+</body>
+</html>
